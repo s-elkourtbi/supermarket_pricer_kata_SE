@@ -41,14 +41,16 @@ public class ProductRestTest {
         product.setName("FOUR");
         product.setPrice(100F);
 
+
         productDto.setIdProduct(1L);
         productDto.setName("FOUR");
         productDto.setPrice(100F);
 
     }
 
+
     @Test
-    public void testNewProduct(){
+    public void testNewProduct() throws Exception {
         when(productService.persist(any())).thenReturn(Optional.of(product));
 
         assertEquals(productRest.newProduct(productDto),
