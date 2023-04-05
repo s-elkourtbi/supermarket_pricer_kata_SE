@@ -27,7 +27,7 @@ public class ProductRest {
         if (null != productDto) {
             try {
                 productService.persist(supermarketMapper.productDtoToProduct(productDto)).get();
-                return new ResponseEntity(productDto, HttpStatus.CREATED);
+                return new ResponseEntity(productDto, HttpStatus.OK);
             } catch (Exception e) {
                 throw new Exception(e);
             }
