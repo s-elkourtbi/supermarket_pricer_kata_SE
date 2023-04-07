@@ -27,7 +27,7 @@ public class Product {
     @Column(name = "NAME", length = 256, nullable = false)
     private String name;
 
-    @Column(name = "PRICE", nullable = false)
+    @Column(name = "PRICE", nullable = false, scale = 2)
     private Float price;
 
     @Column(name = "QUANTITY", nullable = true)
