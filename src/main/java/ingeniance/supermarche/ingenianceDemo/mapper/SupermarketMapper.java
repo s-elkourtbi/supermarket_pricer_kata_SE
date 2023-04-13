@@ -2,9 +2,11 @@ package ingeniance.supermarche.ingenianceDemo.mapper;
 
 import ingeniance.supermarche.ingenianceDemo.Dto.CartDTO;
 import ingeniance.supermarche.ingenianceDemo.Dto.CartItemDTO;
+import ingeniance.supermarche.ingenianceDemo.Dto.PriceRuleDTO;
 import ingeniance.supermarche.ingenianceDemo.Dto.ProductDto;
 import ingeniance.supermarche.ingenianceDemo.entity.Cart;
 import ingeniance.supermarche.ingenianceDemo.entity.CartItem;
+import ingeniance.supermarche.ingenianceDemo.entity.PriceRule;
 import ingeniance.supermarche.ingenianceDemo.entity.Product;
 import org.mapstruct.Mapper;
 import org.springframework.stereotype.Component;
@@ -21,6 +23,9 @@ public interface SupermarketMapper {
 
     CartItem cartItemDtoToCartItem(CartItemDTO cartItemDTO);
     CartItemDTO cartItemToCartItem(CartItem cartItem);
+
+    PriceRule priceRuleDtoToEntity(PriceRuleDTO priceRuleDTO);
+    PriceRuleDTO priceRuletoDTO(PriceRule priceRule);
 
 
 }

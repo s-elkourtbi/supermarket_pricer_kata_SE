@@ -1,12 +1,14 @@
 package ingeniance.supermarche.ingenianceDemo.Dto;
 
+import ingeniance.supermarche.ingenianceDemo.entity.PriceRule;
+
 public class ProductDto {
 
     private Long idProduct;
 
     private String name;
 
-    private Float price;
+    private PriceRule priceRule;
 
     private Integer quantity;
 
@@ -27,12 +29,12 @@ public class ProductDto {
         this.name = name;
     }
 
-    public Float getPrice() {
-        return price;
+    public PriceRule getPriceRule() {
+        return priceRule;
     }
 
-    public void setPrice(Float price) {
-        this.price = price;
+    public void setPriceRule(PriceRule priceRule) {
+        this.priceRule = priceRule;
     }
 
     public Integer getQuantity() {

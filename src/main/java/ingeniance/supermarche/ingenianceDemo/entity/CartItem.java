@@ -1,5 +1,6 @@
 package ingeniance.supermarche.ingenianceDemo.entity;
 
+import ingeniance.supermarche.ingenianceDemo.factory.PriceCalculator;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
@@ -61,8 +62,8 @@ public class CartItem {
         this.quantity = quantity;
     }
 
-    public float getTotalPrice() {
-        return product.getPrice() * quantity;
-    }
+        public Float getTotalPrice() {
+            return PriceCalculator.calculateFinalPrice(product.getPriceRule(), quantity);
+        }
 }
 

@@ -27,8 +27,9 @@ public class Product {
     @Column(name = "NAME", length = 256, nullable = false)
     private String name;
 
-    @Column(name = "PRICE", nullable = false, scale = 2)
-    private Float price;
+    @ManyToOne
+    @JoinColumn(name = "ID_PRICE_RULE")
+    private PriceRule priceRule;
 
     @Column(name = "QUANTITY", nullable = true)
     private Integer quantity;
@@ -49,12 +50,12 @@ public class Product {
         this.name = name;
     }
 
-    public Float getPrice() {
-        return price;
+    public PriceRule getPriceRule() {
+        return priceRule;
     }
 
-    public void setPrice(Float price) {
-        this.price = price;
+    public void setPriceRule(PriceRule priceRule) {
+        this.priceRule = priceRule;
     }
 
     public Integer getQuantity() {

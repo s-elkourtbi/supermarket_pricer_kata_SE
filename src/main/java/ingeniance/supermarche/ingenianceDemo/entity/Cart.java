@@ -16,7 +16,7 @@ import java.util.List;
 @DynamicUpdate
 public class Cart {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ_CART_ITEM")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ_CART")
     @Column(name = "ID_CART", nullable = false, unique = true)
     private Long idCart;
 
