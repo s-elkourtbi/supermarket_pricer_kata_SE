@@ -1,4 +1,4 @@
-package ingeniance.supermarche.ingenianceDemo;
+package ingeniance.supermarche.ingenianceDemo.serviceTest;
 
 import ingeniance.supermarche.ingenianceDemo.Dto.CartDTO;
 import ingeniance.supermarche.ingenianceDemo.entity.Cart;
@@ -47,7 +47,6 @@ public class CartServiceTest {
         product = new Product();
         product.setIdProduct(1L);
         product.setName("Test Product");
-        product.setPrice(100.0f);
 
         item = new ItemInCart();
         item.setProductId(1L);

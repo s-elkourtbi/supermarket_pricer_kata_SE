@@ -1,4 +1,4 @@
-package ingeniance.supermarche.ingenianceDemo;
+package ingeniance.supermarche.ingenianceDemo.restTest;
 
 import ingeniance.supermarche.ingenianceDemo.Dto.CartDTO;
 import ingeniance.supermarche.ingenianceDemo.rest.CartRest;

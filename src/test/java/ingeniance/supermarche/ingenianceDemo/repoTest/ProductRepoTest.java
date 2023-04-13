@@ -1,4 +1,4 @@
-package ingeniance.supermarche.ingenianceDemo;
+package ingeniance.supermarche.ingenianceDemo.repoTest;
 
 import ingeniance.supermarche.ingenianceDemo.entity.Product;
 import ingeniance.supermarche.ingenianceDemo.repository.ProductRepository;
@@ -22,7 +22,7 @@ public class ProductRepoTest {
 
         product.setIdProduct(1L);
         product.setName("FOUR");
-        product.setPrice(100F);
+
 
     }
 

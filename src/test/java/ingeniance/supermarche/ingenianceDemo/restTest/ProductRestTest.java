@@ -1,4 +1,4 @@
-package ingeniance.supermarche.ingenianceDemo;
+package ingeniance.supermarche.ingenianceDemo.restTest;
 
 import ingeniance.supermarche.ingenianceDemo.Dto.ProductDto;
 import ingeniance.supermarche.ingenianceDemo.entity.Product;
@@ -39,12 +39,10 @@ public class ProductRestTest {
         MockitoAnnotations.openMocks(this);
         product.setIdProduct(1L);
         product.setName("FOUR");
-        product.setPrice(100F);
-
 
         productDto.setIdProduct(1L);
         productDto.setName("FOUR");
-        productDto.setPrice(100F);
+
 
     }
 

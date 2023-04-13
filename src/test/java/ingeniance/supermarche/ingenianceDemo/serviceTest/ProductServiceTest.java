@@ -1,4 +1,4 @@
-package ingeniance.supermarche.ingenianceDemo;
+package ingeniance.supermarche.ingenianceDemo.serviceTest;
 
 import ingeniance.supermarche.ingenianceDemo.entity.Product;
 import ingeniance.supermarche.ingenianceDemo.repository.ProductRepository;
@@ -34,11 +34,11 @@ public class ProductServiceTest {
 
         product1.setIdProduct(1L);
         product1.setName("FOUR");
-        product1.setPrice(100F);
+
 
         product2.setIdProduct(2L);
         product2.setName("TV");
-        product2.setPrice(200F);
+
 
 
     }
