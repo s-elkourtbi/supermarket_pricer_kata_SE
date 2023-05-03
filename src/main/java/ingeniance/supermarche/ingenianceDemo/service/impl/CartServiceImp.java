@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * Contains business logic for cart operations.
+ */
 @Service
 public class CartServiceImp implements CartService {
 

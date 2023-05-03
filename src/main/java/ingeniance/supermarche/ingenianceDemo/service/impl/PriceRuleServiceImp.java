@@ -10,6 +10,9 @@ import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Contains business logic for PriceRule operations.
+ */
 @Service
 public class PriceRuleServiceImp implements PriceRuleService {
 

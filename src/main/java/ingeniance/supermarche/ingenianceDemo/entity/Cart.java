@@ -8,6 +8,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Cart Entity
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "SEQ_CART", sequenceName = "SEQ_CART", allocationSize = 1, initialValue = 10)
@@ -17,7 +20,7 @@ import java.util.List;
 public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ_CART")
-    @Column(name = "ID_CART", nullable = false, unique = true)
+    @Column(name = "ID_CART")
     private Long idCart;
 
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)

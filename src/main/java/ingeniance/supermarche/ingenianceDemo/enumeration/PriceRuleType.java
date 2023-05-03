@@ -1,5 +1,8 @@
 package ingeniance.supermarche.ingenianceDemo.enumeration;
 
+/**
+ * Price rule enum to define
+ */
 public enum PriceRuleType {
 
     SIMPLE,

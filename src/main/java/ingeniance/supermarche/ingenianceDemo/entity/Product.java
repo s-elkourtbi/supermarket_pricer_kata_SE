@@ -8,6 +8,10 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+/**
+ *
+ * Product Entity.
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "SEQ_PRODUCT", sequenceName = "SEQ_PRODUCT", allocationSize = 1, initialValue = 10)
@@ -21,7 +25,7 @@ public class Product {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ_PRODUCT")
-    @Column(name = "ID_PRODUCT", nullable = false, unique = true)
+    @Column(name = "ID_PRODUCT")
     private Long idProduct;
 
     @Column(name = "NAME", length = 256, nullable = false)

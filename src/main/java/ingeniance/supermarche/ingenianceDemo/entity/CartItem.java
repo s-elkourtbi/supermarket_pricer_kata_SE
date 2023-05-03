@@ -7,6 +7,9 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+/**
+ * Cart Item Entity
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "SEQ_CART_ITEM", sequenceName = "SEQ_CART_ITEM", allocationSize = 1, initialValue = 10)
@@ -16,7 +19,7 @@ import javax.persistence.*;
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ_CART_ITEM")
-    @Column(name = "ID_CART_ITEM", nullable = false, unique = true)
+    @Column(name = "ID_CART_ITEM")
     private Long idCartItem;
 
     @ManyToOne

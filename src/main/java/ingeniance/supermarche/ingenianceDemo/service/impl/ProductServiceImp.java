@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Contains business logic for Product operations.
+ */
 @Service
 public class ProductServiceImp implements ProductService {
 
