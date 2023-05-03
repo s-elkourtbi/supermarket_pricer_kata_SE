@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Handles HTTP requests for cart operations.
+ */
+
 @RestController
 @RequestMapping("/api/cart")
 public class CartRest {

@@ -10,6 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Handles HTTP requests for PriceRule operations.
+ */
+
 @RestController
 @RequestMapping("/api/pricing")
 public class PriceRuleRest {

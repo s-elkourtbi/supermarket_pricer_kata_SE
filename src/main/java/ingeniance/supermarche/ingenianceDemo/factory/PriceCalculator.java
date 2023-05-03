@@ -1,38 +1,47 @@
 package ingeniance.supermarche.ingenianceDemo.factory;
 
 import ingeniance.supermarche.ingenianceDemo.entity.PriceRule;
+import ingeniance.supermarche.ingenianceDemo.pricingStrategy.PricingStrategy;
+import ingeniance.supermarche.ingenianceDemo.pricingStrategy.implementation.BuyTwoGetOneFree;
+import ingeniance.supermarche.ingenianceDemo.pricingStrategy.implementation.PerPoundPrice;
+import ingeniance.supermarche.ingenianceDemo.pricingStrategy.implementation.SimplePriceStrategy;
+import ingeniance.supermarche.ingenianceDemo.pricingStrategy.implementation.ThreForDollar;
 
+/**
+ * Contain the logic to calculate the price depending on price rule applied
+ * to the product
+ */
 public class PriceCalculator {
-    public static Float calculateFinalPrice(PriceRule priceRule, float quantity) {
-        float finalPrice;
 
+    /**
+     *
+     * @param priceRule
+     * @param quantity
+     * @return final price
+     */
+    public static Float calculateFinalPrice(PriceRule priceRule, float quantity) {
+        PricingStrategy strategy;
+        // Depending on the type of the price rule, assign the appropriate pricing strategy
         switch (priceRule.getType()) {
             case SIMPLE:
-                finalPrice = priceRule.getSimplePrice() * quantity;
+                strategy = new SimplePriceStrategy();
                 break;
 
             case THREE_FOR_DOLLAR:
-                int itemNumberforOneDollar = 3;
-                int numberOfBundlesForOneDollar = (int) (quantity / itemNumberforOneDollar);
-                int remainingItemsForOneDollar = (int) (quantity % itemNumberforOneDollar);
-                finalPrice = numberOfBundlesForOneDollar + remainingItemsForOneDollar * priceRule.getSimplePrice();
+                strategy = new ThreForDollar();
                 break;
 
             case PER_POUND:
-                finalPrice = (quantity / 16) * priceRule.getSimplePrice();
+                strategy = new PerPoundPrice();
                 break;
 
             case BUY_TWO_GET_ONE_FREE:
-                int itemCountInBundle = 3;
-                int numberOfBundles = (int) (quantity / itemCountInBundle);
-                int remainingItems = (int) (quantity % itemCountInBundle);
-                finalPrice = ( numberOfBundles * 2 + remainingItems ) * priceRule.getSimplePrice();
+                strategy = new BuyTwoGetOneFree();
                 break;
 
             default:
                 throw new IllegalArgumentException("Unsupported price rule type");
         }
-
-        return finalPrice;
+        return strategy.calculatePrice(priceRule, quantity);
     }
 }

@@ -3,6 +3,7 @@ package ingeniance.supermarche.ingenianceDemo.rest;
 import ingeniance.supermarche.ingenianceDemo.Dto.ProductDto;
 import ingeniance.supermarche.ingenianceDemo.mapper.SupermarketMapper;
 import ingeniance.supermarche.ingenianceDemo.service.ProductService;
+import ingeniance.supermarche.ingenianceDemo.service.impl.ExcelImportService;
 import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,12 +14,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Handles HTTP requests for Product operations.
+ */
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductRest {
 
     @Autowired
     ProductService productService;
+
+    @Autowired
+    ExcelImportService excelImportService;
 
     SupermarketMapper supermarketMapper = Mappers.getMapper(SupermarketMapper.class);
 

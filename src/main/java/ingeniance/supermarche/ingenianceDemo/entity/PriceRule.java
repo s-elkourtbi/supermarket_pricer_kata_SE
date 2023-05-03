@@ -7,6 +7,9 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
+/**
+ * Price rule Entity
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @SequenceGenerator(name = "SEQ_PRICE", sequenceName = "SEQ_PRICE", allocationSize = 1, initialValue = 10)
@@ -16,7 +19,7 @@ import javax.persistence.*;
 public class PriceRule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SEQ_PRICE")
-    @Column(name = "ID_PRICE_RULE", nullable = false, unique = true)
+    @Column(name = "ID_PRICE_RULE")
     private Long idPriceRule;
 
     @Column(name = "description")
